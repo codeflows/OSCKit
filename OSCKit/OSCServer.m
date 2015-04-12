@@ -42,6 +42,20 @@
   [self.socket close];
 }
 
+- (NSInteger)getPort {
+  if(self.socket) {
+    return self.socket.localPort;
+  }
+  return -1;
+}
+
+- (BOOL)isClosed {
+  if(self.socket) {
+    return [self.socket isClosed];
+  }
+  return false;
+}
+
 - (void)dealloc {
   if(self.socket) {
     [self.socket close];

@@ -15,5 +15,7 @@
 
 - (void)listen:(NSInteger)port;
 - (void)stop;
+- (NSInteger)getPort;
+- (BOOL)isClosed;
 
 @end
